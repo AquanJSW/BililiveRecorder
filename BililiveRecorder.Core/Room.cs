@@ -646,12 +646,22 @@ retry:
 
                         // 刚更新了房间信息不需要再获取一次
                         if (this.Streaming && this.AutoRecordForThisSession && this.RoomConfig.AutoRecord)
+                        {
+                            if (!this.CheckTitle())
+                            {
+                                this.logger.Information("标题不符合要求，不录制");
+                                return;
+                            }
+
                             this.CreateAndStartNewRecordTask(skipFetchRoomInfo: true);
+                        }
                     }
                     catch (Exception) { }
                 });
             }
         }
+
+        private bool CheckTitle() => !this.title.Contains("二台");
 
         private void Room_PropertyChanged(object? sender, PropertyChangedEventArgs e)
         {
