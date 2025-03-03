@@ -1,5 +1,11 @@
-bililive-recorder (2.15.0-1) UNRELEASED; urgency=medium
+bililive-recorder (2.15.1-1) noble; urgency=medium
+
+  * New upstream version 2.15.1
+
+ -- aquanjsw <zhdlcc@gmail.com>  Mon, 03 Mar 2025 16:18:47 +0800
+
+bililive-recorder (2.15.0-1) noble; urgency=medium
 
   * Initial release. (Closes: #nnnn)  <nnnn is the bug number of your ITP>
 
- -- aquanjsw <zhdlcc@gmail.com>  Mon, 24 Feb 2025 19:22:37 +0800
+ -- aquanjsw <zhdlcc@gmail.com>  Mon, 03 Mar 2025 16:18:15 +0800
