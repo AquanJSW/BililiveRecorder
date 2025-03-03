@@ -3,8 +3,9 @@ Section: unknown
 Priority: optional
 Maintainer: aquanjsw <zhdlcc@gmail.com>
 Rules-Requires-Root: no
+# Ubuntu 24.04 LTS
 Build-Depends:
- debhelper-compat (= 13), npm, dotnet-sdk (>= 6.0)
+ debhelper-compat (= 13), npm, dotnet-sdk-8.0
 Standards-Version: 4.6.2
 Homepage: https://rec.danmuji.org/
 Vcs-Browser: https://github.com/BililiveRecorder/BililiveRecorder
