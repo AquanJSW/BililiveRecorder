@@ -1,0 +1,1 @@
+extend-diff-ignore = "node_modules|bin|obj|dist|publish|Makefile|BililiveRecorder.Web/embeded|^test/|webui/source/stats.html"

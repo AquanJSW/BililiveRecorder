@@ -1,0 +1,17 @@
+[Unit]
+Description=BililiveRecorder
+After=network.target
+
+[Service]
+# Default: /root/brec_ws, change it to your own path
+Environment="BREC_WS=%h/brec_ws"
+ExecStartPre=mkdir -p "$BREC_WS"
+# Change the options here
+ExecStart=/opt/bililive-recorder/BililiveRecorder.Cli run \
+    --bind "http://*:2356" \
+    --http-basic-user "root" \
+    --http-basic-pass "" \
+    "$BREC_WS"
+
+[Install]
+WantedBy=multi-user.target

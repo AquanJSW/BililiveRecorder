@@ -1,0 +1,51 @@
+diff --git a/webui/source/vite.config.ts b/webui/source/vite.config.ts
+index 4f2dd63..51a2d3e 100644
+--- a/webui/source/vite.config.ts
++++ b/webui/source/vite.config.ts
+@@ -6,21 +6,25 @@ import { execSync } from 'child_process';
+ import { inc } from 'semver';
+ import { resolve } from 'path';
+ 
+-function getVersion() {
+-  const desc = execSync('git describe --always --tags --abbrev=8').toString().trim();
+-  if (desc.indexOf('-') === -1) {
+-    return desc;
+-  }
+-  const branch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
+-  const _desc = desc.split('-');
+-  const version = inc(_desc[0], 'patch');
+-  const commit = _desc[1];
+-  const sha = _desc[2];
+-  return `${version}-${branch}.${commit}-${sha}`;
++async function getVersion() {
++  return await fetch("https://api.github.com/repos/BililiveRecorder/BililiveRecorder/releases/latest", {
++    method: "GET",
++    headers: {
++      "Accept": "application/vnd.github+json",
++      "X-GitHub-Api-Version": '2022-11-28'
++    }
++  })
++  .then(res => res.json())
++  .then((data) => data['tag_name'])
++  .catch(error => {
++    console.error('Error:', error);
++    console.warn('Using default version v0.0.0');
++    return 'v0.0.0';
++  })
+ }
+ 
+ // https://vitejs.dev/config/
+-export default defineConfig(({ command }) => {
++export default defineConfig(async ({ command }) => {
+   return {
+     base: process.env.BASE_URL || './',
+     plugins: [vue(), vueJsx(), visualizer()] as PluginOption[],
+@@ -49,7 +53,7 @@ export default defineConfig(({ command }) => {
+       minify: 'terser',
+     },
+     define: {
+-      __VERSION__: command == 'build' ? '"' + getVersion() + '"' : '"dev"',
++      __VERSION__: command == 'build' ? '"' + await getVersion() + '"' : '"dev"',
+     },
+     resolve: {
+       'alias': { '@': resolve('./src') },
