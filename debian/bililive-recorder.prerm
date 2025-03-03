@@ -2,3 +2,5 @@
 
 set -e
 rm -f /usr/bin/bililive-recorder
+
+#DEBHELPER#

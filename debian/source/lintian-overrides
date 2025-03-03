@@ -1,0 +1,4 @@
+source-is-missing [BililiveRecorder.Web/embeded/player/artplayer-plugin-danmuku.js]
+source-is-missing [BililiveRecorder.Web/embeded/player/artplayer.js]
+source-is-missing [BililiveRecorder.Web/embeded/player/mpegts.js]
+source-contains-prebuilt-windows-binary [BililiveRecorder.WPF/lib/miniffmpeg]

@@ -2,3 +2,5 @@
 
 set -e
 ln -s /opt/bililive-recorder/BililiveRecorder.Cli /usr/bin/bililive-recorder
+
+#DEBHELPER#

@@ -3,17 +3,13 @@ Source: https://github.com/BililiveRecorder/BililiveRecorder
 Upstream-Name: BililiveRecorder
 Upstream-Contact: rec@danmuji.org
 
-Files:
- *
-Copyright:
- 2025 BililiveRecorder <rec@danmuji.org>
+Files: *
+Copyright: 2025 BililiveRecorder <rec@danmuji.org>
 License: GPL-3+
 
-Files:
- debian/*
- Makefile
-Copyright:
- 2025 aquanjsw <zhdlcc@gmail.com>
+# And Makefile in the root directory
+Files: debian/*
+Copyright: 2025 aquanjsw <zhdlcc@gmail.com>
 License: GPL-3+
  
 License: GPL-3+

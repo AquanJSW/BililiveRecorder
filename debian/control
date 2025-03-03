@@ -1,5 +1,5 @@
 Source: bililive-recorder
-Section: unknown
+Section: video
 Priority: optional
 Maintainer: aquanjsw <zhdlcc@gmail.com>
 Rules-Requires-Root: no
@@ -17,5 +17,5 @@ Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
-Description: A bilibili live stream recorder
-  Bililive Recorder is a live stream recorder for bilibili.com
+Description: bilibili live stream recorder
+ Bililive Recorder is a live stream recorder for bilibili.com
