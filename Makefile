@@ -6,9 +6,9 @@ build-arch:
 	dotnet publish -c Release -r linux-x64 BililiveRecorder.Cli/BililiveRecorder.Cli.csproj
 
 install:
-	mkdir -p $(DESTDIR)/usr/lib/bililive-recorder
-	cp -r $(CURDIR)/BililiveRecorder.Cli/publish/linux-x64/Release/* $(DESTDIR)/usr/lib/bililive-recorder
-	chmod -x $(DESTDIR)/usr/lib/bililive-recorder/*
-	chmod +x $(DESTDIR)/usr/lib/bililive-recorder/BililiveRecorder.Cli
+	mkdir -p $(DESTDIR)/usr/lib/brec
+	cp -r $(CURDIR)/BililiveRecorder.Cli/publish/linux-x64/Release/* $(DESTDIR)/usr/lib/brec
+	chmod -x $(DESTDIR)/usr/lib/brec/*
+	chmod +x $(DESTDIR)/usr/lib/brec/BililiveRecorder.Cli
 
 .PHONY: install build-arch

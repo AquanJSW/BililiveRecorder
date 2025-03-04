@@ -1,10 +1,10 @@
-bililive-recorder (2.15.1-1) noble; urgency=medium
+brec (2.15.1-1) noble; urgency=medium
 
   * New upstream version 2.15.1
 
  -- aquanjsw <zhdlcc@gmail.com>  Mon, 03 Mar 2025 16:18:47 +0800
 
-bililive-recorder (2.15.0-1) noble; urgency=medium
+brec (2.15.0-1) noble; urgency=medium
 
   * Initial release.
 

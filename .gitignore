@@ -1,6 +1,6 @@
 # Debian
 debian/**/*.ex
-debian/bililive-recorder/
+debian/brec/
 debian/.debhelper/
 debian/*.debhelper
 debian/*.substvars

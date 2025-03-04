@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+ln -s /usr/lib/brec/BililiveRecorder.Cli /usr/bin/brec
+
+#DEBHELPER#

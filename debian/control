@@ -1,4 +1,4 @@
-Source: bililive-recorder
+Source: brec
 Section: video
 Priority: optional
 Maintainer: aquanjsw <zhdlcc@gmail.com>
@@ -11,7 +11,7 @@ Homepage: https://rec.danmuji.org/
 Vcs-Browser: https://github.com/BililiveRecorder/BililiveRecorder
 Vcs-Git: https://github.com/BililiveRecorder/BililiveRecorder
 
-Package: bililive-recorder
+Package: brec
 Architecture: any
 Multi-Arch: foreign
 Depends:
