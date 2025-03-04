@@ -2,5 +2,6 @@
 
 set -e
 rm -f /usr/bin/brec
+systemctl disable --now brec || true
 
 #DEBHELPER#
